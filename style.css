@@ -1,0 +1,147 @@
+:root {
+    --fg-color: rgb(241, 240, 239);
+    --bg-color: #232225;
+    --hl-color: #ba252b;
+    --alt-color: #A2948B;
+    --alt2-color: #a98372;
+
+    --transition: 0.5s ease-in-out;
+
+    --nav-width: 200px;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    min-width: 100vw;
+}
+
+main h1 {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    width: 100%;
+    background-color: var(--hl-color);
+    color: var(--fg-color);
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+nav h1 {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+main article {
+    padding-bottom: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navcont {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+#main-doc {
+    background-color: var(--alt-color);
+}
+
+main code {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 400;
+    line-height: 1rem;
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0.75rem 2rem;
+}
+
+@media screen and (min-width:738px) {
+
+    .container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .navcont {
+        position: fixed;
+        width: var(--nav-width);
+        min-height: 100%;
+    }
+
+    #main-doc {
+        display: block;
+        width: calc(100vw - var(--nav-width));
+        position: absolute;
+        left: var(--nav-width);
+        min-height: 100vh;
+
+    }
+}
+
+@media screen and (max-width:738px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .navcont {
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+
+    #main-doc {
+        display: block;
+        width: 100vw;
+        position: relative;
+
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--fg-color);
+    padding-left: 1rem;
+    line-height: 2rem;
+}
+
+main ul {
+    padding-bottom: 1rem;
+}
+
+main li {
+    line-height: 1.5rem;
+    padding-left: 2rem;
+    font-family: 'Quicksand';
+}
+
+main p {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: 'Quicksand';
+}
